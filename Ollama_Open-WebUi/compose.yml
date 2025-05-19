@@ -2,7 +2,7 @@
 services:
   ollama:
       container_name: ollama
-      image: ollama/ollama3.2:3b
+      image: ollama/ollama:latest
       restart: unless-stopped
       networks:
         ai-net:
@@ -10,7 +10,7 @@ services:
       ports:
         - "11434:11434"
       volumes:
-        - ollama:/root/.ollama3
+        - ollama:/root/.ollama
       deploy:
         resources:
           reservations:
